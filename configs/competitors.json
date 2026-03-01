@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Example Competitor",
+    "id": "example",
+    "website": "https://example.com",
+    "web_monitors": [
+      {"type": "changelog", "url": "https://example.com/changelog", "label": "Changelog"},
+      {"type": "pricing", "url": "https://example.com/pricing", "label": "Pricing"},
+      {"type": "landing_page", "url": "https://example.com", "label": "Homepage"}
+    ],
+    "social_keywords": ["example", "example app"],
+    "social_subreddits": ["r/ExampleOfficial"],
+    "github_repos": ["example-org/example-repo"]
+  }
+]
