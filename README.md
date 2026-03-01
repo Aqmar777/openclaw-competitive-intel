@@ -64,7 +64,7 @@ User: "Full competitor scan on Manus AI"
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/openclaw-competitive-intel.git
+git clone https://github.com/jrr996shujin-png/openclaw-competitive-intel.git
 
 # Copy to OpenClaw workspace
 cp -r openclaw-competitive-intel ~/.openclaw/workspace/skills/competitive-intel
