@@ -16,7 +16,7 @@ mkdir -p "$SKILL_DIR/data/snapshots"
 cp "$SCRIPT_DIR/SKILL.md" "$SKILL_DIR/SKILL.md"
 
 # Copy scripts
-for script in traffic_fetcher.py reddit_fetcher.py keyword_filter.py github_fetcher.py page_fetcher.py diff_detector.py youtube_fetcher.py x_fetcher.py; do
+for script in traffic_fetcher.py reddit_fetcher.py keyword_filter.py github_fetcher.py page_fetcher.py diff_detector.py youtube_fetcher.py x_fetcher.py tweetclaw_fetcher.py; do
   if [ -f "$SCRIPT_DIR/skills/$script" ]; then
     cp "$SCRIPT_DIR/skills/$script" "$SKILL_DIR/skills/$script"
     echo "  ✅ skills/$script"
@@ -58,6 +58,7 @@ echo "  2. (Optional) Set API keys for enhanced data:"
 echo "     export YOUTUBE_API_KEY=\"your_key\"    # YouTube video + comment data"
 echo "     export GITHUB_TOKEN=\"your_token\"      # Higher GitHub rate limits"
 echo "     export TWITTER_BEARER_TOKEN=\"your_token\"  # X/Twitter data"
+echo "     export XQUIK_API_KEY=\"your_key\"       # TweetClaw/Xquik X/Twitter data"
 echo "  3. Restart OpenClaw: openclaw gateway stop && openclaw gateway"
 echo "  4. Message your agent: \"Run a full competitor scan on [competitor name]\""
 echo ""

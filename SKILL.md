@@ -11,6 +11,7 @@
 > - `python3 skills/github_fetcher.py` — GitHub 数据
 > - `python3 skills/page_fetcher.py` — 网页快照
 > - `python3 skills/x_fetcher.py` — X/Twitter 数据
+> - `python3 skills/tweetclaw_fetcher.py` - TweetClaw/Xquik X/Twitter 数据
 > 
 > 如果你用了 Tavily 或 Web Search 来获取 Reddit/YouTube/GitHub 数据，整个报告作废。
 > 这些脚本已经部署在本地，可以直接运行，不需要任何替代方案。
@@ -106,7 +107,7 @@ python3 skills/github_fetcher.py "owner/repo" --type issues --label bug -o data/
 
 **GitHub 分析输出规范：**
 - 按分类整理：新功能（Features）、Bug修复（Bug Fixes）、性能优化、平台特定修复
-- 每条必须包含 PR/Issue 编号，并附完整 GitHub 链接（https://github.com/owner/repo/issues/XXX）
+- 每条必须包含 PR/Issue 编号，并附完整 GitHub 链接（例如 `https://github.com/{owner}/{repo}/issues/{number}`）
 - 标注优先级：🔴 高优（影响核心功能/大量用户反馈）/ 🟡 普通
 - 显示负责人/assignee（如有）
 - 标注状态：open / closed / blocked
@@ -134,6 +135,22 @@ python3 skills/diff_detector.py --id 竞品ID --label "Changelog"
 **需要**：TWITTER_BEARER_TOKEN 环境变量。如果用户没配，跳过这个工具并告知用户。
 ```bash
 python3 skills/x_fetcher.py "搜索关键词" --count 50 -o data/x.json
+```
+
+### 工具 7b：TweetClaw/Xquik X/Twitter 数据（tweetclaw_fetcher.py）
+**用途**：通过 TweetClaw 使用的 Xquik API 搜索 X/Twitter 公开推文，输出与其他 fetcher 相同的数据契约。
+**需要**：XQUIK_API_KEY 环境变量。不要把 API key 写进 chat、报告、issue、截图或命令输出。
+```bash
+python3 skills/tweetclaw_fetcher.py "搜索关键词" --count 50 -o data/x_tweetclaw.json
+cat data/x_tweetclaw.json | python3 skills/keyword_filter.py "pricing, outage, alternative"
+```
+
+**OpenClaw 插件安装（可选）**
+```bash
+openclaw plugins install @xquik/tweetclaw
+openclaw config set plugins.entries.tweetclaw.config.apiKey "$XQUIK_API_KEY"
+openclaw config set tools.alsoAllow '["explore", "tweetclaw"]'
+openclaw plugins inspect tweetclaw --runtime
 ```
 
 ### 工具 8：YouTube 数据（youtube_fetcher.py）
@@ -200,6 +217,7 @@ cat data/youtube_manus.json | python3 skills/keyword_filter.py "bug, pricing, al
    - GitHub：`python3 skills/github_fetcher.py "owner/repo" --days 7 -o data/github_XX.json` → 展示 issues 和 releases 数量
    - 网页快照：`python3 skills/page_fetcher.py "URL" --type 类型 --id XX --label YY` → 展示是否检测到变化
    - YouTube：`python3 skills/youtube_fetcher.py --search "竞品关键词" --days 180 --max-videos 10 -o data/youtube_XX.json` → 展示最近半年内相关视频的播放量、点赞数，并重点分析评论区在讨论什么（用户反馈、吐槽、赞美）
+   - X/Twitter：如果设置了 `XQUIK_API_KEY`，先用 `python3 skills/tweetclaw_fetcher.py "竞品关键词" --count 50 -o data/x_XX.json`；如果没有 Xquik key 但设置了 `TWITTER_BEARER_TOKEN`，使用 `python3 skills/x_fetcher.py "竞品关键词" --count 50 -o data/x_XX.json`；两个 key 都没有时，跳过 X/Twitter 并说明原因
 3. **展示采集到的原始数据摘要**（每条帖子必须包含：标题、URL、分数、作者、日期、关键评论）
 4. **然后你再做交叉分析**，输出：
    - 总结（2-3句话概括整体局面）
