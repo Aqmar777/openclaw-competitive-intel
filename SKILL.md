@@ -147,7 +147,7 @@ cat data/x_tweetclaw.json | python3 skills/keyword_filter.py "pricing, outage, a
 
 **OpenClaw 插件安装（可选）**
 ```bash
-openclaw plugins install @xquik/tweetclaw
+openclaw plugins install npm:@xquik/tweetclaw
 openclaw config set plugins.entries.tweetclaw.config.apiKey "$XQUIK_API_KEY"
 openclaw config set tools.alsoAllow '["explore", "tweetclaw"]'
 openclaw plugins inspect tweetclaw --runtime

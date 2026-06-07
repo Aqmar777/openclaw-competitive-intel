@@ -8,7 +8,7 @@ as the existing Reddit, YouTube, GitHub, traffic, and X fetchers.
 ## Install TweetClaw In OpenClaw
 
 ```bash
-openclaw plugins install @xquik/tweetclaw
+openclaw plugins install npm:@xquik/tweetclaw
 openclaw config set plugins.entries.tweetclaw.config.apiKey "$XQUIK_API_KEY"
 openclaw config set tools.alsoAllow '["explore", "tweetclaw"]'
 openclaw plugins inspect tweetclaw --runtime

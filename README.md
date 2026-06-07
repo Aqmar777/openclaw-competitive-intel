@@ -105,7 +105,7 @@ You may want to start with a few competitors and add more over time.
 Teams that use OpenClaw can add TweetClaw as a public X/Twitter signal source:
 
 ```bash
-openclaw plugins install @xquik/tweetclaw
+openclaw plugins install npm:@xquik/tweetclaw
 openclaw config set plugins.entries.tweetclaw.config.apiKey "$XQUIK_API_KEY"
 openclaw config set tools.alsoAllow '["explore", "tweetclaw"]'
 python3 skills/tweetclaw_fetcher.py "competitor name" --count 50 -o data/x_competitor.json
