@@ -161,9 +161,6 @@ openclaw-competitive-intel includes some helpful tools:
 
 - Multi-source data: It gathers information from popular sources known for competitor research.
 
-- TweetClaw source: Search tweets and public X/Twitter reactions through the
-  Xquik API used by the OpenClaw TweetClaw plugin.
-
 ---
 
 ## 🔍 Common Terms
@@ -179,6 +176,9 @@ Here are some simple explanations of terms used in the app:
 - **OpenClaw Skills**: Specialized functions for data gathering and analysis.
 
 - **OSINT (Open Source Intelligence)**: Collecting information from public web sources.
+
+- **TweetClaw Source**: Searches tweets and public X/Twitter reactions through
+  the Xquik API used by the OpenClaw TweetClaw plugin.
 
 ---
 
