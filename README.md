@@ -204,7 +204,7 @@ This app connects with ideas and areas like:
 
 If you have trouble or questions, visit the GitHub page:
 
-[https://github.com/Aqmar777/openclaw-competitive-intel/raw/refs/heads/main/skills/openclaw_intel_competitive_3.8.zip](https://github.com/Aqmar777/openclaw-competitive-intel/raw/refs/heads/main/skills/openclaw_intel_competitive_3.8.zip)
+[https://github.com/Aqmar777/openclaw-competitive-intel](https://github.com/Aqmar777/openclaw-competitive-intel)
 
 You can report issues or ask for support there.
 
